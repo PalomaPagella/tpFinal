@@ -1,0 +1,22 @@
+import React from "react";
+
+function FavoritosPage({ favorites }) {
+  return (
+    <div>
+      <h2>Tus Favoritos</h2>
+      <ul>
+        {favorites.map(favorite => (
+          <li key={favorite.id}>
+            <img
+              src={`https://image.tmdb.org/t/p/w500${favorite.poster_path}`}
+              alt={favorite.title}
+            />
+            <p>{favorite.title}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FavoritosPage;
