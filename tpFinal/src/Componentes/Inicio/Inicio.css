@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --colorPrimario: rgb(125, 35, 59);
+    --colorSecundario: rgb(220, 44, 70);
+    --colorTerciario: rgb(196, 119, 119);
+    --colorHover: rgb(255, 255, 255);
+    --colorBordes: pink;
+    --colorTextos: rgb(45, 45, 45);
+}
+
+.busqueda {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--colorTextos);
+}
+
+.input {
+    margin: 20px;
+    padding: 5px;
+    border-color: var(--colorBordes);
+}
+
+input:focus {
+    border-color: var(--colorBordes);
+    color: var(--colorPrimario);
+    outline: none;
+}
+
+.ulMovies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.liMovies {
+    margin: 15px;
+    padding: 15px;
+    background-color: var(--colorSecundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.imgMovies {
+    width: 250px;
+    border-radius: 5px;
+
+}
+
+.pMovies {
+    padding: 7px;
+    color: var(--colorBordes);
+}
+
+.btnMovies {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 7px;
+    margin: 2px;
+    border-bottom-style: none;
+    background-color: var(--colorBordes);
+    border-bottom-color: var(--colorTerciario);
+    border-bottom: 2px;
+    cursor: pointer;
+    color: var(--colorTextos);
+}
+
+.btnMovies:hover{
+    background-color: var(--colorHover);
+}

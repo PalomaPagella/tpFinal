@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import "./Inicio.css"
 
 function Inicio({ favorites, setFavorites }) {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    
+
 
     useEffect(() => {
         if (searchTerm) {
@@ -31,13 +32,15 @@ function Inicio({ favorites, setFavorites }) {
 
     return (
         <>
+        <div className='busqueda'>
             <h3>Buscá tu peli</h3>
-            <input
+            <input className='input'
                 type="text"
-                placeholder="Search for movies"
+                placeholder="Título"
                 value={searchTerm}
                 onChange={handleSearch}
             />
+        </div>
             <ul className='ulMovies'>
                 {movies.map(movie => (
                     <li className='liMovies' key={movie.id}>
@@ -47,7 +50,7 @@ function Inicio({ favorites, setFavorites }) {
                             alt={movie.title}
                         />
                         <p className='pMovies'>{movie.title}</p>
-                        <button onClick={() => addToFavorites(movie)}>Agregar a Favoritos</button>
+                        <button className='btnMovies' onClick={() => addToFavorites(movie)}>Agregar a Favoritos</button>
                     </li>
                 ))}
             </ul>

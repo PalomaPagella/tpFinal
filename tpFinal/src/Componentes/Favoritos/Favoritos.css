@@ -1,22 +1,13 @@
-import React from "react";
-
-function FavoritosPage({ favorites }) {
-  return (
-    <div>
-      <h2>Tus Favoritos</h2>
-      <ul>
-        {favorites.map(favorite => (
-          <li key={favorite.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${favorite.poster_path}`}
-              alt={favorite.title}
-            />
-            <p>{favorite.title}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+*{
+  margin: 0;
+  padding: 0;
 }
 
-export default FavoritosPage;
+:root {
+  --colorPrimario: rgb(125, 35, 59);
+  --colorSecundario: rgb(220, 44, 70);
+  --colorTerciario: rgb(196, 119, 119);
+  --colorHover: rgb(255, 255, 255);
+  --colorBordes: pink;
+  --colorTextos: rgb(45, 45, 45);
+}

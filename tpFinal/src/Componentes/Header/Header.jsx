@@ -12,7 +12,7 @@ const Header = () => {
         <BrowserRouter>
             <header>
                 <nav className="NavHeader">
-                    <NavLink className={"navlink"} to="/Inicio">Inicio</NavLink>
+                    <NavLink className={"navlink"} to="/Inicio">Búsqueda</NavLink>
                     <NavLink className={"navlink"} to="/Contacto">Contacto</NavLink>
                     <NavLink className={"navlink"} to="/Favoritos">Favoritos</NavLink>
                 </nav>

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --colorPrimario: rgb(125, 35, 59);
+    --colorSecundario: rgb(220, 44, 70);
+    --colorTerciario: rgb(196, 119, 119);
+    --colorHover: rgb(255, 255, 255);
+    --colorBordes: pink;
+    --colorTextos: rgb(45, 45, 45);
+}
