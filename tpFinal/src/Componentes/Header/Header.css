@@ -4,25 +4,27 @@
 }
 
 :root {
-    --colorPrimario: rgb(125, 35, 59);
+    --colorPrimario: rgb(12, 12, 12);
     --colorSecundario: rgb(220, 44, 70);
     --colorTerciario: rgb(196, 119, 119);
     --colorHover: rgb(255, 255, 255);
     --colorBordes: pink;
-    --colorTextos: rgb(45, 45, 45);
-    
+    --colorTextos: rgb(37, 36, 36);
+    --colorBtn: rgb(57, 56, 56);
 }
+
 
 .NavHeader {
     display: flex;
     padding: 15px;
     align-items: center;
     justify-content: end;
-    background-image: linear-gradient(to right, transparent, rgb(216, 150, 164)), url(../assets/backgroundHeader.jpg);
+    background-image: linear-gradient(to right, transparent, rgb(216, 150, 164)), url(../assets/Universe.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     height: 100px;
+    flex-wrap: wrap;
 }
 
 .navlink {
@@ -45,3 +47,5 @@ a {
 a:hover {
     color: var(--colorHover);
 }
+
+/* Queries resueltas con wrap */

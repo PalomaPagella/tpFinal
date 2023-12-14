@@ -1,9 +1,10 @@
 import React from 'react';
+import "./Favoritos.css"
 
 function Favoritos({ favoritesList }) {
     return (
         <>
-            <h3>Tus películas favoritas</h3>
+            <h3 className='h3Fav'>Tus películas favoritas</h3>
             <ul className='ulMovies'>
                 {favoritesList.map(movie => (
                     <li className='liMovies' key={movie.id}>

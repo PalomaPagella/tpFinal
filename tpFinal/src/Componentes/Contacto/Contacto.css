@@ -1,13 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --colorPrimario: rgb(125, 35, 59);
+    --colorPrimario: rgb(12, 12, 12);
     --colorSecundario: rgb(220, 44, 70);
     --colorTerciario: rgb(196, 119, 119);
     --colorHover: rgb(255, 255, 255);
     --colorBordes: pink;
-    --colorTextos: rgb(45, 45, 45);
+    --colorTextos: rgb(37, 36, 36);
+    --colorBtn: rgb(57, 56, 56);
 }
+
+
+form {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    flex-wrap: wrap;
+}
+
+label {
+    margin: 10px;
+    color: var(--colorBordes);
+}
+
+.contacto {
+    margin: 20px;
+}
+
+
+/* Queries resueltas con wrap */

@@ -50,7 +50,7 @@ function Inicio({ favorites, setFavorites }) {
                             alt={movie.title}
                         />
                         <p className='pMovies'>{movie.title}</p>
-                        <button className='btnMovies' onClick={() => addToFavorites(movie)}>Agregar a Favoritos</button>
+                        <button className='btn' onClick={() => addToFavorites(movie)}>Agregar a Favoritos</button>
                     </li>
                 ))}
             </ul>
