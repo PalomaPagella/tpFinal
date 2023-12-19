@@ -75,7 +75,6 @@ function Busqueda({ favorites, setFavorites }) {
                                 <div className='movie-details'>
                                     <p>Género: {movie.genre_ids.map(genreId => genres[genreId]).join(', ')}</p>
                                     <p>Sinopsis: {movie.overview}</p>
-                                    {/* Puedes mostrar más detalles de la película si lo deseas */}
                                 </div>
                             )}
                         </div>

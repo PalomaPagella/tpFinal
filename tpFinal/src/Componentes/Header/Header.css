@@ -14,7 +14,7 @@
 }
 
 
-.NavHeader {
+header {
     display: flex;
     padding: 15px;
     align-items: center;
