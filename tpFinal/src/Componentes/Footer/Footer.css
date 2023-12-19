@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --colorPrimario: rgb(12, 12, 12);
+    --colorSecundario: rgb(44, 214, 220);
+    --colorTerciario: rgb(36, 35, 35);
+    --colorHover: rgb(255, 255, 255);
+    --colorBordes: rgb(223, 104, 35);
+    --colorTextos: rgb(249, 137, 45);
+    --colorBtn: rgb(57, 56, 56);
+}
+
+.Footer {
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: small;
+    color: var(--colorHover);
+    background-color: var(--colorTerciario);
+    width: 100%;
+}
+
+.imgLogo {
+    width: 100px;
+}

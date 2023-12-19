@@ -5,11 +5,11 @@
 
 :root {
     --colorPrimario: rgb(12, 12, 12);
-    --colorSecundario: rgb(220, 44, 70);
-    --colorTerciario: rgb(196, 119, 119);
+    --colorSecundario: rgb(44, 214, 220);
+    --colorTerciario: rgb(36, 35, 35);
     --colorHover: rgb(255, 255, 255);
-    --colorBordes: pink;
-    --colorTextos: rgb(37, 36, 36);
+    --colorBordes: rgb(223, 104, 35);
+    --colorTextos: rgb(249, 137, 45);
     --colorBtn: rgb(57, 56, 56);
 }
 
@@ -24,9 +24,20 @@ form {
     flex-wrap: wrap;
 }
 
+input {
+    color: var(--colorTextos);
+}
+
+textarea {
+    color: var(--colorTextos);
+}
+textarea:focus{
+    color: var(--colorSecundario);
+}
+
 label {
     margin: 10px;
-    color: var(--colorBordes);
+    color: var(--colorTextos);
 }
 
 .contacto {

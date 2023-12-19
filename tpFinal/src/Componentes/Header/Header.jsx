@@ -1,5 +1,3 @@
-// Header.jsx
-
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Busqueda from "../Busqueda/Busqueda";
@@ -12,7 +10,7 @@ const MoviesSection = ({ recentMovies, showMovieDetails, selectedMovie, genres }
     return (
         <section id="Inicio">
             <div className="App">
-                <h1>¡Películas agregadas recientemente!</h1>
+                <h1>Películas agregadas recientemente</h1>
                 <ul className='ulMovies'>
                     {recentMovies.map(movie => (
                         <li className='liMovies' key={movie.id}>
@@ -81,19 +79,25 @@ const Header = () => {
     };
 
     const showInicioSection = window.location.pathname === "/";
-
+   
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return (
         <Router>
             <header>
                 <nav className="NavLogo">
-                    <NavLink className={"navlink"} to="/" onClick={() => inicioRef.current.scrollIntoView()}>
-                        <img src={tmdb} alt="" />
+                    <NavLink className={"navlink"} to="#Inicio" onClick={() => inicioRef.current.scrollIntoView()}>
+                        <img className="imgHeader" src={tmdb} alt="" />
                     </NavLink>
                 </nav>
                 <nav className="NavHeader">
-                    <NavLink className={"navlink"} to="/Busqueda">Búsqueda</NavLink>
-                    <NavLink className={"navlink"} to="/Contacto">Contacto</NavLink>
-                    <NavLink className={"navlink"} to="/Favoritos">Favoritos</NavLink>
+                    <NavLink className={"navlink"} to="/Busqueda" onClick={scrollToTop}>Búsqueda</NavLink>
+                    <NavLink className={"navlink"} to="/Contacto" onClick={scrollToTop}>Contacto</NavLink>
+                    <NavLink className={"navlink"} to="/Favoritos" onClick={scrollToTop}>Favoritos</NavLink>
                 </nav>
             </header>
 

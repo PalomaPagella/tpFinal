@@ -50,9 +50,10 @@ function Busqueda({ favorites, setFavorites }) {
         setSelectedMovie(selectedMovie === movie ? null : movie);
     };
 
+
     return (
         <>
-            <div className='busqueda'>
+            <div className='busqueda' >
                 <h3>Buscá tu peli</h3>
                 <input className='input'
                     type="text"
@@ -72,9 +73,9 @@ function Busqueda({ favorites, setFavorites }) {
                             />
                             <p className='pMovies'>{movie.title}</p>
                             {selectedMovie === movie && (
-                                <div className='movie-details'>
-                                    <p>Género: {movie.genre_ids.map(genreId => genres[genreId]).join(', ')}</p>
-                                    <p>Sinopsis: {movie.overview}</p>
+                                <div className='movieDetalles'>
+                                    <p className='generoDetalles'>Género: {movie.genre_ids.map(genreId => genres[genreId]).join(', ')}</p>
+                                    <p className='sinopsisDetalles'>Sinopsis: {movie.overview}</p>
                                 </div>
                             )}
                         </div>

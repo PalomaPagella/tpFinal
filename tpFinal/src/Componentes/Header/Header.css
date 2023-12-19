@@ -5,35 +5,35 @@
 
 :root {
     --colorPrimario: rgb(12, 12, 12);
-    --colorSecundario: rgb(220, 44, 70);
-    --colorTerciario: rgb(196, 119, 119);
+    --colorSecundario: rgb(44, 214, 220);
+    --colorTerciario: rgb(36, 35, 35);
     --colorHover: rgb(255, 255, 255);
-    --colorBordes: pink;
-    --colorTextos: rgb(37, 36, 36);
+    --colorBordes: rgb(223, 104, 35);
+    --colorTextos: rgb(249, 137, 45);
     --colorBtn: rgb(57, 56, 56);
 }
-
 
 header {
     display: flex;
     padding: 15px;
     align-items: center;
-    justify-content: end;
-    background-image: linear-gradient(to right, transparent, rgb(216, 150, 164)), url(../assets/Universe.jpg);
+    justify-content: space-between;
+    background-image: url(../assets/marmolNegro.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: 100px;
+    height: 60px;
     flex-wrap: wrap;
+}
+
+.imgHeader {
+    width: 100px;
 }
 
 .navlink {
     list-style: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.navlink:hover {
-    color: var(--colorHover);
+    
 }
 
 a {
@@ -42,10 +42,25 @@ a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     color: var(--colorTextos);
+   
+}
+
+
+/* Position y hovers */
+
+header {
+    position: sticky;
+    top: 0px;
 }
 
 a:hover {
     color: var(--colorHover);
 }
+
+.navlink:hover {
+    color: var(--colorHover);
+}
+
+
 
 /* Queries resueltas con wrap */

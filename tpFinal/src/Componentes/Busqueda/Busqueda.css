@@ -1,15 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-}
+  
 
+}
 :root {
     --colorPrimario: rgb(12, 12, 12);
-    --colorSecundario: rgb(220, 44, 70);
-    --colorTerciario: rgb(196, 119, 119);
+    --colorSecundario: rgb(44, 214, 220);
+    --colorTerciario: rgb(36, 35, 35);
     --colorHover: rgb(255, 255, 255);
-    --colorBordes: pink;
-    --colorTextos: rgb(37, 36, 36);
+    --colorBordes: rgb(223, 104, 35);
+    --colorTextos: rgb(249, 137, 45);
     --colorBtn: rgb(57, 56, 56);
 }
 
@@ -19,8 +20,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: var(--colorHover);
+    color: var(--colorTextos);
     font-family:'Trebuchet MS', sans-serif;
+   
+ 
+  
 }
 
 .input {
@@ -31,7 +35,7 @@
 
 input:focus {
     border-color: var(--colorBordes);
-    color: var(--colorPrimario);
+    color: var(--colorTextos);
     outline: none;
 }
 
@@ -39,7 +43,7 @@ input:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    background-color: var(--colorTerciario);
 }
 
 .liMovies {
@@ -51,6 +55,9 @@ input:focus {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--colorSecundario);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -62,7 +69,15 @@ input:focus {
 
 .pMovies {
     padding: 7px;
-    color: var(--colorBordes);
+    color: var(--colorTextos);
+}
+
+.generoDetalles{
+    color: var(--colorSecundario);
+}
+
+.sinopsisDetalles{
+    color: var(--colorHover);
 }
 
 .btn {
@@ -78,7 +93,7 @@ input:focus {
 }
 
 .btn:hover{
-    background-color: var(--colorSecundario);
+    background-color: var(--colorHover);
 }
 
 /* Queries resueltas con wrap */
