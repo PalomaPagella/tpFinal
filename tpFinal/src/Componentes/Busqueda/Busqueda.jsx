@@ -46,9 +46,10 @@ function Busqueda({ favorites, setFavorites }) {
         });
     };
 
-    const showMovieDetails = (movie) => {
-        setSelectedMovie(selectedMovie === movie ? null : movie);
-    };
+    const toggleMovieCard = (movie) => {
+        setSelectedMovie(movie === selectedMovie ? null : movie);
+      };
+
 
 
     return (
@@ -64,8 +65,11 @@ function Busqueda({ favorites, setFavorites }) {
             </div>
             <ul className='ulMovies'>
                 {movies.map(movie => (
-                    <li className='liMovies' key={movie.id}>
-                        <div className='movie-card' onClick={() => showMovieDetails(movie)}>
+                    <li
+                        className={`liMovies ${selectedMovie === movie ? 'movie-card-expanded centered-movie-card' : ''}`}
+                        key={movie.id}
+                    >
+                        <div className='movie-card' onClick={() => toggleMovieCard(movie)}>
                             <img
                                 className='imgMovies'
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

@@ -21,3 +21,61 @@
   justify-content: center;
 
 }
+.Card{
+  flex-wrap: wrap;
+}
+
+
+/* Media query para dispositivos móviles */
+
+@media screen and (max-width: 480px) {
+
+  .Card {
+    padding: 10px;
+  }
+
+  .ulMovies {
+    font-size: 14px;
+  }
+
+  .liMovies {
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  .imgMovies {
+    width: 150px;
+  }
+
+  .pMovies {
+     font-size: 16px;
+  }
+
+}
+
+/* Media query para tabletas */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .Card {
+    padding: 20px;
+  }
+
+  .ulMovies {
+      font-size: 18px;
+  }
+
+  .liMovies {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .imgMovies {
+     width: 200px;
+  }
+
+  .pMovies {
+     font-size: 20px;
+  }
+
+ }

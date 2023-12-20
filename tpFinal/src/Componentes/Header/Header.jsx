@@ -8,9 +8,9 @@ import tmdb from "../assets/tmdb.svg";
 
 const MoviesSection = ({ recentMovies, showMovieDetails, selectedMovie, genres }) => {
     return (
-        <section id="Inicio">
+        <section>
             <div className="App">
-                <h1>Películas agregadas recientemente</h1>
+                <h1 className="h1Header" id="Inicio">Películas agregadas recientemente</h1>
                 <ul className='ulMovies'>
                     {recentMovies.map(movie => (
                         <li className='liMovies' key={movie.id}>
@@ -42,6 +42,12 @@ const Header = () => {
     const [recentMovies, setRecentMovies] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [genres, setGenres] = useState({});
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
 
     const obtenerFechaHaceUnMes = () => {
         const fechaHaceUnMes = new Date();
@@ -79,7 +85,7 @@ const Header = () => {
     };
 
     const showInicioSection = window.location.pathname === "/";
-   
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -89,19 +95,39 @@ const Header = () => {
     return (
         <Router>
             <header>
-                <nav className="NavLogo">
-                    <NavLink className={"navlink"} to="#Inicio" onClick={() => inicioRef.current.scrollIntoView()}>
-                        <img className="imgHeader" src={tmdb} alt="" />
-                    </NavLink>
-                </nav>
+                <NavLink className={"navlink"} to="/">
+                    <img className="imgHeader" src={tmdb} alt="" />
+                </NavLink>
                 <nav className="NavHeader">
-                    <NavLink className={"navlink"} to="/Busqueda" onClick={scrollToTop}>Búsqueda</NavLink>
-                    <NavLink className={"navlink"} to="/Contacto" onClick={scrollToTop}>Contacto</NavLink>
-                    <NavLink className={"navlink"} to="/Favoritos" onClick={scrollToTop}>Favoritos</NavLink>
+                    <div className={`hamburger-menu`} onClick={toggleMenu}>
+                        <div className={`line ${showMenu ? "line1" : ""}`}></div>
+                        <div className={`line ${showMenu ? "line2" : ""}`}></div>
+                        <div className={`line ${showMenu ? "line3" : ""}`}></div>
+                    </div>
+
+                    <div className={`nav-links ${showMenu ? "show" : ""}`}>
+
+                        <NavLink className={"navlink"} to="/Busqueda">
+                            Búsqueda
+                        </NavLink>
+                        <NavLink className={"navlink"} to="/Contacto">
+                            Contacto
+                        </NavLink>
+                        <NavLink className={"navlink"} to="/Favoritos">
+                            Favoritos
+                        </NavLink>
+                    </div>
+                    <div className={`overlay ${showMenu ? 'show' : ''}`} onClick={toggleMenu}></div>
                 </nav>
             </header>
 
             <Routes>
+                <Route path="/" element={<MoviesSection
+                    recentMovies={recentMovies}
+                    showMovieDetails={showMovieDetails}
+                    selectedMovie={selectedMovie}
+                    genres={genres}
+                />} />
                 <Route path="/Busqueda" element={<Busqueda favorites={favorites} setFavorites={setFavorites} />} />
                 <Route path="/Contacto" element={<Contacto />} />
                 <Route path="/Favoritos" element={<Favoritos favoritesList={favorites} />} />

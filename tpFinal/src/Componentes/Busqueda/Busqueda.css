@@ -1,9 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-  
+
 
 }
+
 :root {
     --colorPrimario: rgb(12, 12, 12);
     --colorSecundario: rgb(44, 214, 220);
@@ -21,10 +22,7 @@
     flex-direction: column;
     align-items: center;
     color: var(--colorTextos);
-    font-family:'Trebuchet MS', sans-serif;
-   
- 
-  
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .input {
@@ -64,36 +62,121 @@ input:focus {
 .imgMovies {
     width: 250px;
     border-radius: 5px;
-
 }
 
 .pMovies {
-    padding: 7px;
+    padding: 5px;
     color: var(--colorTextos);
 }
 
-.generoDetalles{
+.movieDetalles{
+    font-size: small;
+}
+.generoDetalles {
     color: var(--colorSecundario);
+    margin: -10px;
+    
 }
 
-.sinopsisDetalles{
+.sinopsisDetalles {
     color: var(--colorHover);
+    font-size: small;
 }
 
 .btn {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 7px;
-    margin: 2px;
-    border-bottom-style: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
     background-color: var(--colorBtn);
-    border-bottom-color: var(--colorSecundario);
-    border-bottom: 2px;
-    cursor: pointer;
     color: var(--colorBordes);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn:hover{
+/* transiciones y hover */
+
+.movie-card-expanded {
+    transform: scale(1,05);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.centered-movie-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover {
     background-color: var(--colorHover);
+    color: var(--colorTextos);
 }
 
-/* Queries resueltas con wrap */
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, cursor 0.3s ease;
+}
+
+/* Media Query para Móviles */
+
+@media screen and (max-width: 480px) {
+    .busqueda {
+        margin: 10px;
+    }
+
+    .input {
+        margin: 10px;
+    }
+
+    .ulMovies {
+              justify-content: flex-start;
+    }
+
+    .liMovies {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .imgMovies {
+        width: 150px;
+    }
+
+    .pMovies {
+        font-size: 14px;
+    }
+
+}
+
+/* Media Query para Tablets */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .busqueda {
+        margin: 20px;
+    }
+
+    .input {
+        margin: 20px;
+    }
+
+    .ulMovies {
+             justify-content: center;
+    }
+
+    .liMovies {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .imgMovies {
+        width: 200px;
+     }
+
+    .pMovies {
+        font-size: 16px;
+    }
+}

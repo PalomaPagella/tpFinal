@@ -33,7 +33,7 @@ header {
 .navlink {
     list-style: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
 }
 
 a {
@@ -42,9 +42,17 @@ a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     color: var(--colorTextos);
-   
+
 }
 
+.h1Header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    margin: 5px;
+    color: var(--colorBtn);
+}
 
 /* Position y hovers */
 
@@ -62,5 +70,73 @@ a:hover {
 }
 
 
+@media screen and (max-width: 768px) {
 
-/* Queries resueltas con wrap */
+    header {
+        justify-content: center;
+    }
+
+    .h1Header {
+        font-size: medium;
+    }
+
+    .NavHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo aquí */
+        z-index: 1;
+      }
+      
+      .overlay.show {
+        display: block;
+        pointer-events: none; 
+      }
+      
+
+    /* Estilos para el icono de hamburguesa */
+
+    .line {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: #000;
+        transition: transform 0.3s ease;
+    }
+
+    .line1 {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .line2 {
+        opacity: 0;
+    }
+
+    .line3 {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+}
